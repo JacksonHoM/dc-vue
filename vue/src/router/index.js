@@ -36,15 +36,22 @@ export const asyncRouterMap = [
       {
         path: 'article',
         name: '商品浏览',
-        component: _import('article/article'),
+        component: _import('item/view_item'),
         meta: {title: '商品浏览', icon: 'example'},
         menu: 'article'
       },
       {
         path: 'orderTime',
         name: '商店浏览',
-        component: _import('orderTime/orderTime'),
+        component: _import('store/view_store'),
         meta: {title: '商店浏览', icon: 'example'},
+        menu: 'orderTime'
+      },
+      {
+        path: 'orderTime',
+        name: '订单信息',
+        component: _import('order/dc_order'),
+        meta: {title: '订单信息', icon: 'form'},
         menu: 'orderTime'
       },
       
@@ -60,28 +67,21 @@ export const asyncRouterMap = [
       {
         path: '',
         name: '个人设置', 
-        component: _import('user/user'),
+        component: _import('dc_user/dc_user'),
         meta: {title: '个人设置', icon: 'user'},
         menu: 'user'
       },
       {
         path: 'role',
         name: '商店管理',
-        component: _import('user/role'),
+        component: _import('store/store'),
         meta: {title: '商店管理', icon: 'user'},
         menu: 'role'
       },
       {
-        path: 'orderTime',
-        name: '订单信息',
-        component: _import('orderTime/orderTime'),
-        meta: {title: '订单信息', icon: 'form'},
-        menu: 'orderTime'
-      },
-      {
         path: 'article',
         name: '商品管理',
-        component: _import('article/article'),
+        component: _import('item/item'),
         meta: {title: '商品管理', icon: 'form'},
         menu: 'article'
       },
